@@ -1,0 +1,16 @@
+<p style="color: green"><%= notice %></p>
+
+<div id="reservations">
+  <div style="display:flex;flex-direction: column">
+  <% @reservations.each do |reservation| %>
+    <%= render reservation %>
+
+  <% end %>
+  </div>
+
+  <div style="text-align:center;">
+        <span style="background-color:#e7e718; padding:10px; border-radius:20px; position:relative; top:20px">
+          <%= link_to "Back to flights", flights_path, {:style=>'text-decoration:none; color: black'} %>
+        </span>
+  </div>
+</div>

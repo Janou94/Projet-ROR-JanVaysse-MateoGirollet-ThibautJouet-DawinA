@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Page Title</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap"
+    rel="stylesheet"
+    />
+</head>
+<body>
+<div class="body_container">
+  <div class="flight_container">
+    <div class="left_content_flight">
+      <div class="flight_num">
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Airplane_silhouette.svg/1200px-Airplane_silhouette.svg.png"
+          alt="plane icon"
+          width="40"
+          height="40"
+          />
+        <p>N°<%= flight.number %></p>
+      </div>
+      <p id="flight_duration"><%= flight.duration %> minutes </p>
+      <div class="name_container">
+        <p class="name_city"> <%= flight.departure_airport %></p>
+        <svg
+          width="24"
+          height="24"
+          xmlns="http://www.w3.org/2000/svg"
+          fill-rule="evenodd"
+          clip-rule="evenodd"
+        >
+          <path
+            d="M21.883 12l-7.527 6.235.644.765 9-7.521-9-7.479-.645.764 7.529 6.236h-21.884v1h21.883z"
+            />
+        </svg>
+        <p class="name_city"><%= flight.arrival_airport %></p>
+      </div>
+      <div style="text-align:center; position:relative;top:50px;">
+        <span><%= flight.departure_date %> </span> <br>
+        <span style="background-color:#e7e718; padding:10px; border-radius:20px;position: relative;top: 20px;">
+          <%= link_to "BOOK THIS FLIGHT !", flight,  {:style=>'text-decoration:none; color: black'} %>
+        </span>
+      </div>
+    </div>
+    <div class="right_content_flight">
+      <div class="sits_container">
+        <p class="sit_text" style="font-size: 14px">Economy tickets</p>
+        <p style="font-size: 30px"><%= flight.economy_class_seats %></p>
+      </div>
+      <div class="sits_container">
+        <p class="sit_text" style="font-size: 14px">Business tickets</p>
+        <p style="font-size: 30px"><%= flight.business_class_seats %></p>
+      </div>
+    </div>
+
+  </div>
+</div>
+</body>
+</html>

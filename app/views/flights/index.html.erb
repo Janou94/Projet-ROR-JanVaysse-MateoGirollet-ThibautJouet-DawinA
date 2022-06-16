@@ -1,0 +1,16 @@
+<p style="color: green"><%= notice %></p>
+
+<%= stylesheet_link_tag "main" %>
+
+<div class="header_component">
+  <h1 class="header_title">Find your next flight here!</h1>
+
+</div>
+
+<div id="flights">
+  <% @flights.each do |flight| %>
+    <%= render flight %>
+  <% end %>
+</div>
+
+<div style="background-color: #44a4e8;text-align: center"><%= will_paginate @posts %></div>
