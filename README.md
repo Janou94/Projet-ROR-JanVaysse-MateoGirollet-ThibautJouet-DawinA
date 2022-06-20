@@ -1,24 +1,26 @@
-# README
+Instructions pour lancer le projet : 
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
+-Git clone du repos
 
-* Ruby version
+-Sur rubyMine, ouvrir le dossier contenant le projet
 
-* System dependencies
+-Toujours sur ruby, editer le template de configuration pour pouvoir lancer son serveur local
 
-* Configuration
+-Pour la BDD, dans le terminal :
+	rails db:create
+	rails db:migrate
+	rails db:seed
 
-* Database creation
+-Et enfin, dans le terminal :
+	bundle install
 
-* Database initialization
 
-* How to run the test suite
+Tout est bon, plus qu'à se créer un compte
 
-* Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
 
-* ...
+
+Difficultés rencontrées : 
+
+Surtout l'installation qui sous windows est un peu capricieuse, et le setup des entités (surtout les clés étrangères) est un peu technique
